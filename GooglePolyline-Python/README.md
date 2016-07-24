@@ -1,6 +1,7 @@
 ## Google's Encoded Polyline Algorithm Format Encoder and Decoder
 
 ![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Python 2.6](https://img.shields.io/badge/python-2.6-lightgrey.svg)
 
 Assuming all the files in this folder have been imported:
 
