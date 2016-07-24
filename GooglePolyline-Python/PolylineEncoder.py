@@ -46,13 +46,10 @@ class PolylineEncoder:
             formatted = self.invert(formatted)
         # Chunkify it
         formatted = self.chunks(formatted[::-1], 5)[::-1]
-        #while not len(formatted[0]) == 5:
-            #formatted = formatted[1:]
         formatted = map(lambda item: item[::-1], formatted)
         formatted = formatted[::-1]
         while formatted[-1] == "0" * len(formatted[-1]):
             formatted = formatted[:-1]
-        # formatted = filter(lambda chunk: chunk != "00000", formatted)
         # Or with 0x20
         last_chunk = formatted[-1]
         formatted = [(int("0b" + chunk, 2) | 0x20) for chunk in formatted[:-1]]
